@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bean &amp; Bread</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+  <header>
+    <p class="greeting" id="greeting">Good morning</p>
+    <h1>Bean &amp; Bread</h1>
+  </header>
+
+  <div class="carousel" id="carousel" aria-roledescription="carousel">
+    <section class="banner">
+      <div class="eyebrow">Fresh from the oven</div>
+      <h2>Croissants baked every morning</h2>
+      <p>Out of the oven by 7am. Best with a flat white.</p>
+      <button class="cta" data-cat="bread">Browse bread →</button>
+      <div class="art" aria-hidden="true">🥐</div>
+    </section>
+    <section class="banner matcha">
+      <div class="eyebrow">New this week</div>
+      <h2>Ceremonial matcha latte</h2>
+      <p>Whisked to order with creamy oat milk.</p>
+      <button class="cta" data-cat="drinks">See drinks →</button>
+      <div class="art" aria-hidden="true">🍵</div>
+    </section>
+    <section class="banner brunch">
+      <div class="eyebrow">All-day breakfast</div>
+      <h2>Eggs, toast &amp; more till 3pm</h2>
+      <p>Sleep in. We'll keep the pan hot.</p>
+      <button class="cta" data-cat="food">See food →</button>
+      <div class="art" aria-hidden="true">🍳</div>
+    </section>
+  </div>
+  <div class="dots" id="dots"></div>
+
+  <nav class="tabs" id="tabs"></nav>
+  <main id="menu"></main>
+
+  <button class="cart-bar" id="cartBar"><span id="cartBarCount"></span><span id="cartBarTotal"></span></button>
+
+  <div id="sheetRoot">
+    <div class="scrim" id="scrim"></div>
+    <div class="sheet" id="orderSheet" role="dialog" aria-label="Your order">
+      <div class="handle"></div>
+      <h2>Your order</h2>
+      <div id="lines"></div>
+      <div class="total"><span>Total</span><span id="total"></span></div>
+      <textarea class="note" id="note" rows="2" placeholder="Note for the barista (oat milk, less sugar…)"></textarea>
+    </div>
+    <div class="sheet options-sheet" id="optionsSheet" role="dialog" aria-label="Choose options">
+      <div class="handle"></div>
+      <div class="opt-head" id="optHead"></div>
+      <div id="optGroups"></div>
+      <div class="opt-footer">
+        <div class="stepper">
+          <button data-optqty="-1" aria-label="One less">−</button>
+          <span id="optQty">1</span>
+          <button data-optqty="1" aria-label="One more">+</button>
+        </div>
+        <button class="opt-add" id="optAdd">Add to order</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/app.js?v=2"></script>
+</body>
+</html>
